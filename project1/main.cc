@@ -5,15 +5,15 @@
 using namespace std;
 
 template <typename T>
-void pushQueue(templatePriorityQueue<T>* Que, int data){
+void pushQueue(templatePriorityQueue<T>* queue, int data){
 	cout << "[+] Integer "<< data <<" pushed in the Priority Queue." << endl;
-	Que->push(data);
+	queue->push(data);
 }
 
 template<typename T>
-void popQueue(templatePriorityQueue<T>* Que){
-	cout << "[+] Integer "<< Que->top() << " will be poped from the Priority Queue." << endl;
-	Que->pop();
+void popQueue(templatePriorityQueue<T>* queue){
+	cout << "[+] Integer "<< queue->top() << " will be poped from the Priority Queue." << endl;
+	queue->pop();
 }
 
 int main(int argc, char* argv[]){

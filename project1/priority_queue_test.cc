@@ -7,45 +7,45 @@
 
 
 TEST(PriorityQueueTest,Trivial){
-	templatePriorityQueue<int> expTarget;
+	templatePriorityQueue<int> exp_priority_queue;
 
 	//Test 1 - Initalize
-	ASSERT_TRUE(expTarget.empty()); // empty test
+	ASSERT_TRUE(exp_priority_queue.empty()); // empty test
 
 	//Test 2 - Push Datas and Top size
-	expTarget.push(1);
-	expTarget.push(4);
-	expTarget.push(2);
-	expTarget.push(3);
-	expTarget.push(8);
-	expTarget.push(5);
+	exp_priority_queue.push(1);
+	exp_priority_queue.push(4);
+	exp_priority_queue.push(2);
+	exp_priority_queue.push(3);
+	exp_priority_queue.push(8);
+	exp_priority_queue.push(5);
 	
-	ASSERT_EQ(expTarget.size(),6); // Pushed 6 elements
-	ASSERT_EQ(expTarget.top(),8);  // The highest pushed value is 8
-	ASSERT_FALSE(expTarget.empty()); // it must not empty
+	ASSERT_EQ(exp_priority_queue.size(),6); // Pushed 6 elements
+	ASSERT_EQ(exp_priority_queue.top(),8);  // The highest pushed value is 8
+	ASSERT_FALSE(exp_priority_queue.empty()); // it must not empty
 
 	//Test 3 - pop test
 
-	expTarget.pop();
-	expTarget.pop();
-	expTarget.pop();
+	exp_priority_queue.pop();
+	exp_priority_queue.pop();
+	exp_priority_queue.pop();
 	
-	ASSERT_EQ(expTarget.top(),3);
-	ASSERT_EQ(expTarget.size(),3);
-	ASSERT_FALSE(expTarget.empty());
+	ASSERT_EQ(exp_priority_queue.top(),3);
+	ASSERT_EQ(exp_priority_queue.size(),3);
+	ASSERT_FALSE(exp_priority_queue.empty());
 
-	expTarget.pop();
-	expTarget.pop();
-	expTarget.pop();
+	exp_priority_queue.pop();
+	exp_priority_queue.pop();
+	exp_priority_queue.pop();
 	
-	ASSERT_TRUE(expTarget.empty());
+	ASSERT_TRUE(exp_priority_queue.empty());
 	
 	/* Fail Example - If you activate this code, Test will be fail *
 
-	expTarget.pop();
+	exp_priority_queue.pop();
 	
-	EXPECT_TRUE(expTarget.empty()); // non-Fatal Failure - not terminate this test case when result of empty method is false.
-	ASSERT_EQ(expTarget.size(),0);
+	EXPECT_TRUE(exp_priority_queue.empty()); // non-Fatal Failure - not terminate this test case when result of empty method is false.
+	ASSERT_EQ(exp_priority_queue.size(),0);
         /**/
 	
 }
